@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ESTUDANTE.IM | Gestão Pedagógica e Correção de Redações</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;500;600&amp;family=Inter:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed": "#0d1a38",
+              "surface-container-high": "#e7e8e9",
+              "on-error-container": "#93000a",
+              "surface-tint": "#5c47d0",
+              "on-secondary-container": "#144f84",
+              "surface-bright": "#f8f9fa",
+              "surface-container-low": "#f3f4f5",
+              "secondary-container": "#92c1fe",
+              "on-tertiary-container": "#a1add2",
+              "on-background": "#191c1d",
+              "inverse-surface": "#2e3132",
+              "error-container": "#ffdad6",
+              "secondary-fixed-dim": "#a0c9ff",
+              "surface-container": "#edeeef",
+              "surface-dim": "#d9dadb",
+              "primary": "#280091",
+              "surface-container-highest": "#e1e3e4",
+              "surface-variant": "#e1e3e4",
+              "error": "#ba1a1a",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#bac6ec",
+              "tertiary-fixed": "#dae2ff",
+              "on-primary-fixed-variant": "#4329b7",
+              "on-primary-container": "#aea3ff",
+              "on-secondary": "#ffffff",
+              "surface": "#f8f9fa",
+              "tertiary": "#1f2b49",
+              "secondary": "#2d6197",
+              "on-tertiary-fixed-variant": "#3a4666",
+              "outline": "#787585",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#e5deff",
+              "inverse-primary": "#c8bfff",
+              "outline-variant": "#c9c4d6",
+              "inverse-on-surface": "#f0f1f2",
+              "tertiary-container": "#354160",
+              "background": "#f8f9fa",
+              "primary-container": "#3e22b2",
+              "on-surface-variant": "#474554",
+              "secondary-fixed": "#d2e4ff",
+              "on-surface": "#191c1d",
+              "on-error": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#c8bfff",
+              "on-primary-fixed": "#190064",
+              "on-secondary-fixed-variant": "#07497d",
+              "on-secondary-fixed": "#001c37"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Manrope"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(24px);
+        }
+        .asymmetric-border {
+            border-left: 2px solid #280091;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .label-text { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body id="top" class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm">
+
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+
+  <!-- BLOCO ESQUERDO -->
+  <div class="flex items-center gap-12">
+
+    <!-- LOGO -->
+    <a href="#top" class="flex items-center gap-2.5 cursor-pointer">
+      <img src="img/logo/logo-estudanteim-brain.png" 
+           alt="Logo" 
+           class="h-9 w-auto opacity-85">
+
+      <span class="text-[17px] font-bold tracking-[-0.01em] text-primary">
+        ESTUDANTE<span class="text-secondary">.IM</span>
+      </span>
+    </a>
+
+    <!-- MENU -->
+    <div class="hidden md:flex items-center gap-8">
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 hover:text-primary relative transition-all duration-200 group" href="#produto">Produto
+  <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span></a>
+
+<a class="text-slate-600 hover:text-primary relative transition-all duration-200 group" href="#como-funciona">Como Funciona
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span></a>
+
+<a class="text-slate-600 hover:text-primary relative transition-all duration-200 group" href="#gestao">Para Instituições
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span></a>
+
+<a class="text-slate-600 hover:text-primary relative transition-all duration-200 group" href="#cta">Contato
+    <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span></a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-xl font-semibold text-sm hover:opacity-90 transition-all active:scale-95 duration-150">
+                Agendar demonstração
+</button>
+</div>
+<div class="bg-slate-100 h-[1px] opacity-15"></div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<h1 class="text-5xl md:text-6xl font-extrabold text-primary leading-[1.1] tracking-tight">
+                    Escale a correção de redações com controle e qualidade pedagógica
+                </h1>
+<p class="mt-6 text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                    IA corrige em segundos. Professores validam com qualidade. Sua instituição acompanha tudo em tempo real.
+</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-1 rounded-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-medium text-tertiary">Corrija mais redações em menos tempo</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-1 rounded-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-medium text-tertiary">Garanta critérios consistentes entre professores</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary bg-primary-fixed p-1 rounded-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-medium text-tertiary">Tenha visibilidade total da evolução dos alunos</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg hover:shadow-primary/20 transition-all">
+                        Agendar demonstração
+                    </button>
+<button class="px-8 py-4 rounded-xl border-2 border-outline-variant/30 text-primary font-bold text-sm hover:bg-surface-container-low transition-all">
+                        Ver como funciona
+                    </button>
+</div>
+</div>
+<div class="relative">
+
+  <p class="text-xs font-bold text-primary uppercase tracking-widest mb-4">VISÃO OPERACIONAL DA CORREÇÃO</p>
+  <div class="absolute -inset-4 bg-primary-fixed/30 rounded-[2rem] blur-3xl -z-10"></div>
+  <div class="bg-surface-container-lowest rounded-2xl shadow-2xl border border-outline-variant/10 overflow-hidden">
+
+<div class="absolute -inset-4 bg-primary-fixed/30 rounded-[2rem] blur-3xl -z-10"></div>
+<div class="bg-surface-container-lowest rounded-2xl shadow-2xl border border-outline-variant/10 overflow-hidden">
+<img 
+  src="img/dash-queue.png" 
+  alt="Fila inteligente de correção de redações com IA e validação pedagógica"
+  class="w-full h-auto object-cover"
+/>
+<div class="p-6 bg-white border-t border-outline-variant/10 shadow-xl">
+<div class="flex justify-between items-center">
+<div class="flex gap-4">
+<div class="h-10 w-10 rounded-full bg-secondary-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">assignment_turned_in</span>
+</div>
+<div>
+<p class="text-xs font-bold text-outline uppercase tracking-wider">Status da Fila</p>
+<p class="text-2xl font-extrabold text-primary">
+  842 redações corrigidas
+</p>
+<p class="text-sm text-on-surface-variant">
+  Tempo médio: 2h18 • Fila ativa: 37
+</p>
+<p class="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
+  VISÃO EM TEMPO REAL
+</p>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary-fixed text-primary text-sm font-bold">
+                                    +12% este mês
+                                </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid lg:grid-cols-2 gap-16 items-start">
+
+
+<!-- BLOCO DE TEXTO -->
+<div class="asymmetric-border pl-8 py-2 max-w-xl">
+
+  <h2 class="text-4xl md:text-5xl font-extrabold text-tertiary leading-[1.1] tracking-tight">
+    O processo de correção ainda limita o crescimento da sua instituição
+  </h2>
+
+  <p class="mt-6 text-lg md:text-xl text-on-surface-variant leading-relaxed max-w-lg">
+    <span class="font-semibold text-tertiary">
+      Tempo excessivo, falta de padronização e pouca visibilidade
+    </span>
+    tornam a correção um processo difícil de escalar com qualidade pedagógica.
+  </p>
+
+</div>
+
+<!-- GRID DE PROBLEMAS -->
+<div class="grid sm:grid-cols-2 gap-8 md:gap-10 mt-10">
+
+  <!-- CARD 1 -->
+  <div class="group p-4 rounded-xl space-y-3 transition-all duration-200 hover:translate-y-[-2px] hover:bg-surface-container-high cursor-default">
+    <span class="material-symbols-outlined text-error text-2xl transition-colors duration-200 group-hover:text-primary">
+      trending_down
+    </span>
+    <h3 class="font-bold text-xl text-tertiary transition-colors duration-200 group-hover:text-primary">
+      1. Escalabilidade
+    </h3>
+    <p class="text-on-surface-variant leading-relaxed">
+      Você não consegue aumentar o volume de redações sem sobrecarregar os professores.
+    </p>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="group p-4 rounded-xl space-y-3 transition-all duration-200 hover:translate-y-[-2px] hover:bg-surface-container-high cursor-default">
+    <span class="material-symbols-outlined text-error text-2xl transition-colors duration-200 group-hover:text-primary">
+      rule
+    </span>
+    <h3 class="font-bold text-xl text-tertiary transition-colors duration-200 group-hover:text-primary">
+      2. Subjetividade
+    </h3>
+    <p class="text-on-surface-variant leading-relaxed">
+      Cada professor corrige de um jeito, dificultando manter critérios consistentes.
+    </p>
+  </div>
+
+  <!-- CARD 3 -->
+  <div class="group p-4 rounded-xl space-y-3 transition-all duration-200 hover:translate-y-[-2px] hover:bg-surface-container-high cursor-default">
+    <span class="material-symbols-outlined text-error text-2xl transition-colors duration-200 group-hover:text-primary">
+      schedule
+    </span>
+    <h3 class="font-bold text-xl text-tertiary transition-colors duration-200 group-hover:text-primary">
+      3. Latência
+    </h3>
+    <p class="text-on-surface-variant leading-relaxed">
+      O tempo entre envio e correção é alto, prejudicando o aprendizado do aluno.
+    </p>
+  </div>
+
+  <!-- CARD 4 -->
+  <div class="group p-4 rounded-xl space-y-3 transition-all duration-200 hover:translate-y-[-2px] hover:bg-surface-container-high cursor-default">
+    <span class="material-symbols-outlined text-error text-2xl transition-colors duration-200 group-hover:text-primary">
+      bar_chart_4_bars
+    </span>
+    <h3 class="font-bold text-xl text-tertiary transition-colors duration-200 group-hover:text-primary">
+      4. Dados
+    </h3>
+    <p class="text-on-surface-variant leading-relaxed">
+      Você não tem uma visão clara da evolução dos alunos e das lacunas da turma.
+    </p>
+  </div>
+
+</div>
+</div>
+</div>
+</section>
+<section id="como-funciona" class="scroll-mt-28 py-24 max-w-7xl mx-auto px-6">
+
+  <!-- HEADER -->
+  <div class="text-center mb-20 max-w-2xl mx-auto">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-tertiary leading-tight">
+      Como a correção acontece na prática
+    </h2>
+
+    <p class="mt-4 text-lg text-on-surface-variant">
+      Um fluxo inteligente que combina automação com validação pedagógica.
+    </p>
+
+    <div class="w-20 h-1 bg-primary mx-auto rounded-full mt-6"></div>
+  </div>
+
+  <!-- PROCESS FLOW -->
+  <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-10">
+
+    <!-- STEP 1 -->
+    <div class="text-center group">
+      <div class="w-16 h-16 bg-surface-container-highest rounded-2xl flex items-center justify-center mx-auto mb-5 transition-all duration-300 group-hover:bg-primary group-hover:text-white">
+        <span class="material-symbols-outlined text-3xl">upload_file</span>
+      </div>
+      <h4 class="font-semibold text-tertiary mb-1">Submissão</h4>
+      <p class="text-sm text-on-surface-variant">Aluno envia a redação</p>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="text-center group">
+      <div class="w-16 h-16 bg-surface-container-highest rounded-2xl flex items-center justify-center mx-auto mb-5 transition-all duration-300 group-hover:bg-primary group-hover:text-white">
+        <span class="material-symbols-outlined text-3xl">document_scanner</span>
+      </div>
+      <h4 class="font-semibold text-tertiary mb-1">OCR</h4>
+      <p class="text-sm text-on-surface-variant">Leitura da redação manuscrita</p>
+    </div>
+
+    <!-- STEP 3 (IA) -->
+    <div class="text-center group">
+      <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mx-auto mb-5">
+        <span class="material-symbols-outlined text-3xl">psychology</span>
+      </div>
+      <h4 class="font-semibold text-primary mb-1">IA corrige</h4>
+      <p class="text-sm text-on-surface-variant">Análise automática e avaliação inicial</p>
+    </div>
+
+    <!-- STEP 4 (HUMANO - DIFERENCIAL) -->
+    <div class="text-center group">
+      <div class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-md">
+        <span class="material-symbols-outlined text-3xl">verified_user</span>
+      </div>
+      <h4 class="font-semibold text-tertiary mb-1">Validação humana</h4>
+      <p class="text-sm text-on-surface-variant">Tutor revisa e garante qualidade pedagógica</p>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="text-center group">
+      <div class="w-16 h-16 bg-surface-container-highest rounded-2xl flex items-center justify-center mx-auto mb-5 transition-all duration-300 group-hover:bg-primary group-hover:text-white">
+        <span class="material-symbols-outlined text-3xl">mark_chat_read</span>
+      </div>
+      <h4 class="font-semibold text-tertiary mb-1">Feedback</h4>
+      <p class="text-sm text-on-surface-variant">Aluno recebe devolutiva orientada</p>
+    </div>
+
+    <!-- STEP 6 -->
+    <div class="text-center group">
+      <div class="w-16 h-16 bg-surface-container-highest rounded-2xl flex items-center justify-center mx-auto mb-5 transition-all duration-300 group-hover:bg-primary group-hover:text-white">
+        <span class="material-symbols-outlined text-3xl">analytics</span>
+      </div>
+      <h4 class="font-semibold text-tertiary mb-1">Gestão</h4>
+      <p class="text-sm text-on-surface-variant">Acompanhamento completo da operação</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="bg-tertiary py-24 text-on-primary">
+
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
+
+    <!-- TEXTO -->
+    <div class="flex-1 max-w-xl">
+
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Tecnologia construída para respeitar a prática pedagógica
+      </h2>
+
+      <p class="mt-4 text-lg text-tertiary-fixed-dim">
+        A inteligência artificial acelera. O professor garante a qualidade.
+      </p>
+
+      <div class="space-y-8 mt-10">
+
+        <!-- PILAR 1 -->
+        <div class="flex gap-4 group">
+          <div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:text-white">
+            <span class="material-symbols-outlined text-primary-fixed">bolt</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-1">Aceleração com IA</h4>
+            <p class="text-tertiary-fixed-dim">
+              Automatiza tarefas repetitivas e identifica erros com rapidez e consistência.
+            </p>
+          </div>
+        </div>
+
+        <!-- PILAR 2 -->
+        <div class="flex gap-4 group">
+          <div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:text-white">
+            <span class="material-symbols-outlined text-primary-fixed">person_search</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-1">Curadoria humana</h4>
+            <p class="text-tertiary-fixed-dim">
+              Todo feedback é validado por especialistas, garantindo precisão e sensibilidade pedagógica.
+            </p>
+          </div>
+        </div>
+
+        <!-- PILAR 3 -->
+        <div class="flex gap-4 group">
+          <div class="w-12 h-12 bg-primary-container rounded-xl flex items-center justify-center transition-all duration-300 group-hover:bg-primary group-hover:text-white">
+            <span class="material-symbols-outlined text-primary-fixed">shield</span>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-1">Conformidade pedagógica</h4>
+            <p class="text-tertiary-fixed-dim">
+              Processos alinhados aos critérios do ENEM e vestibulares, com controle de qualidade contínuo.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- IMAGEM -->
+    <div class="flex-1 w-full max-w-md">
+      <div class="aspect-square bg-gradient-to-br from-primary-container to-tertiary-container rounded-3xl p-1 shadow-2xl overflow-hidden">
+        <img 
+          src="/img/people.png"
+          class="rounded-[1.5rem] shadow-xl grayscale hover:grayscale-0 transition-all duration-500"
+          alt="Equipe pedagógica analisando resultados"
+        />
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="produto" class="scroll-mt-28 py-24 bg-surface">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="text-center mb-20 max-w-2xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-tertiary leading-tight">
+        Recursos pensados para a gestão pedagógica
+      </h2>
+      <p class="mt-4 text-lg text-on-surface-variant">
+        Mais do que corrigir redações, sua instituição passa a operar com dados, escala e consistência.
+      </p>
+    </div>
+
+    <!-- GRID -->
+    <div class="grid md:grid-cols-12 grid-rows-2 gap-6 md:h-[620px]">
+
+      <!-- FEATURE 1 -->
+      <div class="md:col-span-4 bg-surface-container-lowest p-8 rounded-3xl border border-outline-variant/10 flex flex-col justify-between shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+
+        <div>
+          <span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">
+            history_edu
+          </span>
+
+          <h4 class="text-xl font-bold text-tertiary mb-3">
+            Corrija manuscritos sem mudar sua operação
+          </h4>
+
+          <p class="text-on-surface-variant">
+            Leitura automática de redações escritas à mão, mantendo o modelo tradicional da escola.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FEATURE 2 -->
+      <div class="md:col-span-8 bg-surface-container-lowest p-8 rounded-3xl border border-outline-variant/10 flex flex-col md:flex-row gap-8 items-center shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+
+        <div class="flex-1">
+          <span class="material-symbols-outlined text-primary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">
+            fact_check
+          </span>
+
+          <h4 class="text-xl font-bold text-tertiary mb-3">
+            Padronize correções com critérios do ENEM
+          </h4>
+
+          <p class="text-on-surface-variant">
+            Notas e justificativas alinhadas às 5 competências oficiais, garantindo consistência entre professores.
+          </p>
+        </div>
+
+        <!-- MINI VISUAL -->
+        <div class="flex-1 w-full bg-surface-container-low rounded-xl p-4">
+          <div class="space-y-3">
+            <div class="h-2 w-full bg-primary/20 rounded-full overflow-hidden">
+              <div class="h-full w-[85%] bg-primary"></div>
+            </div>
+            <div class="h-2 w-full bg-primary/20 rounded-full overflow-hidden">
+              <div class="h-full w-[70%] bg-primary"></div>
+            </div>
+            <div class="h-2 w-full bg-primary/20 rounded-full overflow-hidden">
+              <div class="h-full w-[95%] bg-primary"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FEATURE 3 -->
+      <div class="md:col-span-6 bg-surface-container-lowest p-8 rounded-3xl border border-outline-variant/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex gap-6 items-center">
+
+        <div class="w-16 h-16 bg-primary-fixed rounded-2xl flex items-center justify-center flex-shrink-0">
+          <span class="material-symbols-outlined text-primary text-3xl">view_list</span>
+        </div>
+
+        <div>
+          <h4 class="text-xl font-bold text-tertiary mb-2">
+            Organize a fila de correção com inteligência
+          </h4>
+
+          <p class="text-on-surface-variant">
+            Priorize automaticamente por prazo, volume ou complexidade e evite gargalos.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- FEATURE 4 -->
+      <div class="md:col-span-6 bg-surface-container-lowest p-8 rounded-3xl border border-outline-variant/10 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex gap-6 items-center">
+
+        <div class="w-16 h-16 bg-secondary-fixed rounded-2xl flex items-center justify-center flex-shrink-0">
+          <span class="material-symbols-outlined text-secondary text-3xl">query_stats</span>
+        </div>
+
+        <div>
+          <h4 class="text-xl font-bold text-tertiary mb-2">
+            Tome decisões com dados pedagógicos
+          </h4>
+
+          <p class="text-on-surface-variant">
+            Visualize evolução de alunos e turmas com insights claros para ação pedagógica.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="gestao" class="scroll-mt-28 py-24 bg-surface-container-low">
+
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+    <!-- IMAGEM -->
+    <div>
+      <img 
+        src="/img/teacher.png"
+        class="rounded-[2.5rem] shadow-xl grayscale hover:grayscale-0 transition-all duration-500"
+        alt="Equipe pedagógica analisando dados"
+      />
+    </div>
+
+    <!-- TEXTO -->
+    <div class="space-y-8 max-w-xl">
+
+      <h2 class="text-4xl md:text-5xl font-extrabold text-tertiary leading-tight">
+        Transforme correção em 
+        <span class="text-primary">inteligência pedagógica</span>
+      </h2>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">
+        Sua instituição deixa de apenas corrigir redações e passa a operar com dados.
+        Coordenadores identificam lacunas, acompanham evolução e tomam decisões pedagógicas com segurança.
+      </p>
+
+      <!-- CARDS -->
+      <div class="grid sm:grid-cols-2 gap-6 pt-4">
+
+        <!-- CARD 1 -->
+        <div class="bg-surface-container-lowest p-6 rounded-2xl border-l-4 border-primary shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <h5 class="font-semibold text-tertiary mb-2">
+            Identifique rapidamente dificuldades
+          </h5>
+          <p class="text-sm text-on-surface-variant">
+            Detecte alunos e turmas com baixo desempenho em competências específicas e aja com precisão.
+          </p>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="bg-surface-container-lowest p-6 rounded-2xl border-l-4 border-primary shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <h5 class="font-semibold text-tertiary mb-2">
+            Garanta consistência entre professores
+          </h5>
+          <p class="text-sm text-on-surface-variant">
+            Padronize critérios de avaliação em toda a instituição e elimine variações subjetivas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="resultados" class="scroll-mt-28 py-24 bg-primary text-on-primary text-center">
+
+  <div class="max-w-5xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="mb-16 max-w-2xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Mais eficiência, escala e controle na sua operação
+      </h2>
+
+      <p class="mt-4 text-primary-fixed-dim text-lg">
+        Reduza tempo, aumente capacidade e tenha total visibilidade sobre a correção.
+      </p>
+    </div>
+
+    <!-- METRICS -->
+    <div class="grid md:grid-cols-3 gap-12">
+
+      <!-- METRIC 1 -->
+      <div class="space-y-3 hover:scale-105 transition-transform duration-300">
+        <div class="text-5xl md:text-6xl font-extrabold text-primary-fixed">
+          70%
+        </div>
+        <p class="text-primary-fixed-dim font-medium uppercase tracking-widest text-sm">
+          menos tempo na correção
+        </p>
+      </div>
+
+      <!-- METRIC 2 -->
+      <div class="space-y-3 hover:scale-105 transition-transform duration-300">
+        <div class="text-5xl md:text-6xl font-extrabold text-primary-fixed">
+          3.5x
+        </div>
+        <p class="text-primary-fixed-dim font-medium uppercase tracking-widest text-sm">
+          mais capacidade operacional
+        </p>
+      </div>
+
+      <!-- METRIC 3 -->
+      <div class="space-y-3 hover:scale-105 transition-transform duration-300">
+        <div class="text-5xl md:text-6xl font-extrabold text-primary-fixed">
+          100%
+        </div>
+        <p class="text-primary-fixed-dim font-medium uppercase tracking-widest text-sm">
+          rastreabilidade e controle
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="prova-social" class="scroll-mt-28 py-24 bg-surface overflow-hidden">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="mb-16 max-w-2xl">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-tertiary leading-tight">
+        Instituições que já operam com mais escala e controle
+      </h2>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- TESTIMONIAL 1 -->
+      <div class="bg-surface-container-low p-10 rounded-3xl relative shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+
+        <span class="material-symbols-outlined absolute top-8 right-8 text-6xl text-primary/10">
+          format_quote
+        </span>
+
+        <p class="text-xl text-tertiary mb-8 font-medium leading-relaxed">
+          “Implementar o ESTUDANTE.IM mudou o patamar da nossa coordenação. 
+          O que antes era um processo nebuloso hoje é um fluxo claro, orientado por dados e com alto nível de qualidade.”
+        </p>
+
+        <div>
+          <p class="font-semibold text-tertiary">Dr. Roberto Almeida</p>
+          <p class="text-sm text-on-surface-variant">
+            Diretor Pedagógico • Rede Educacional Horizonte
+          </p>
+        </div>
+
+      </div>
+
+      <!-- TESTIMONIAL 2 -->
+      <div class="bg-surface-container-low p-10 rounded-3xl relative shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+
+        <span class="material-symbols-outlined absolute top-8 right-8 text-6xl text-primary/10">
+          format_quote
+        </span>
+
+        <p class="text-xl text-tertiary mb-8 font-medium leading-relaxed">
+          “A combinação entre IA e validação humana nos trouxe segurança total no processo. 
+          Hoje conseguimos escalar a correção sem abrir mão da qualidade pedagógica.”
+        </p>
+
+        <div>
+          <p class="font-semibold text-tertiary">Profa. Maria Helena</p>
+          <p class="text-sm text-on-surface-variant">
+            Coordenadora de Linguagens • Colégio Ápice
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="cta" class="scroll-mt-28 py-24 max-w-7xl mx-auto px-6 mb-24">
+
+  <div class="bg-gradient-to-br from-tertiary to-primary-container rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
+
+    <!-- BACKGROUND EFFECT -->
+    <div class="absolute -top-24 -left-24 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-secondary/20 rounded-full blur-3xl"></div>
+
+    <!-- CONTENT -->
+    <div class="relative z-10 max-w-3xl mx-auto">
+
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+        Comece a escalar sua correção com qualidade hoje
+      </h2>
+
+      <p class="text-lg md:text-xl text-tertiary-fixed-dim mb-10">
+        Veja na prática como sua instituição pode corrigir mais, com consistência e controle pedagógico.
+      </p>
+
+      <!-- CTA BUTTONS -->
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+
+        <!-- PRIMARY CTA -->
+        <button class="bg-primary-fixed text-on-primary-fixed px-6 py-3 rounded-2xl font-semibold text-base hover:bg-white hover:scale-105 transition-all duration-300 shadow-lg">
+          Agendar demonstração
+        </button>
+
+        <!-- SECONDARY CTA -->
+        <button class="bg-transparent border-2 border-primary-fixed text-primary-fixed px-6 py-3 rounded-2xl font-semibold text-base hover:bg-primary-fixed/10 transition-all duration-300">
+          Falar com especialista
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+</main>
+<!-- Footer -->
+<footer class="bg-surface w-full pt-16 pb-8 border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-lg font-black text-tertiary">ESTUDANTE.IM</div>
+<p class="text-sm text-on-surface-variant">
+    Plataforma de avaliação educacional que combina IA e validação humana para escalar a correção com consistência pedagógica e controle institucional.
+</p>
+</div>
+<div>
+<h6 class="text-xs font-bold uppercase tracking-wide text-on-surface-variant mb-6">Plataforma</h6>
+<ul class="space-y-4 text-sm">
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Redação</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">OCR Inteligente</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Dashboard</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Analytics</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-xs font-bold uppercase tracking-wide text-on-surface-variant mb-6">Institucional</h6>
+<ul class="space-y-4 text-sm">
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Sobre Nós</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Casos de Sucesso</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Carreiras</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Contato</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-xs font-bold uppercase tracking-wide text-on-surface-variant mb-6">Legal</h6>
+<div class="flex flex-wrap gap-4">
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Privacidade</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">LGPD</a>
+<a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Termos</a>
+</div>
+<div class="mt-8 flex gap-6">
+  <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+  <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/estudante.im/" target="_blank">Instagram</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-outline-variant/20">
+<p class="text-center text-xs text-on-surface-variant/70 tracking-wide">
+                © 2026 ESTUDANTE.IM. Todos os direitos reservados.
+            </p>
+</div>
+</footer>
+
+</body></html>
