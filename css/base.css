@@ -1,0 +1,37 @@
+.asymmetric-border {
+    border-left: 2px solid #280091;
+    }
+    
+body {
+  font-family: 'Manrope', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.glass-nav {
+    backdrop-filter: none;
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+h1, h2, h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: none;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.label-text {
+  font-family: 'Inter', sans-serif;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
