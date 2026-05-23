@@ -1,4 +1,5 @@
 # estudanteim.github.io (github pages)
+
 # ESTUDANTE.IM — Plataforma de Avaliação Educacional com IA + Validação Humana
 
 ## 📌 Visão Geral
@@ -17,10 +18,10 @@ Validar narrativa, gerar confiança institucional e viabilizar as primeiras conv
 
 **Status atual:**
 
-* Presença digital criada (LinkedIn + Instagram + domínio)
-* Landing Page funcional publicada
-* Estrutura legal implementada
-* Arquitetura frontend organizada
+- Presença digital criada (LinkedIn + Instagram + domínio)
+- Landing Page funcional publicada
+- Estrutura legal implementada
+- Arquitetura frontend organizada
 
 ---
 
@@ -29,7 +30,8 @@ Validar narrativa, gerar confiança institucional e viabilizar as primeiras conv
 ```
 ./assets
 ./components
-  ├── header.html
+  ├── header-desktop.html
+  ├── header-mobile.html
   ├── footer.html
   ├── modal-legal.html
 ./css
@@ -52,10 +54,10 @@ README.md
 
 ## ⚙️ Stack Tecnológico
 
-* HTML + TailwindCSS (CDN)
-* JavaScript Vanilla
-* Componentização via JS (header/footer/modal)
-* Deploy estático (GitHub Pages)
+- HTML + TailwindCSS (CDN)
+- JavaScript Vanilla
+- Componentização via JS (header/footer/modal)
+- Deploy estático (GitHub Pages)
 
 ---
 
@@ -63,22 +65,22 @@ README.md
 
 ### Header
 
-* Fixo (fixed)
-* Fundo branco sólido (evita problemas de renderização)
-* Navegação com âncoras para index
+- Fixo (fixed)
+- Fundo branco sólido (evita problemas de renderização)
+- Navegação com âncoras para index
 
 ### Footer
 
-* Estruturado com links institucionais e legais
+- Estruturado com links institucionais e legais
 
 ### Modal Legal
 
-* Exibe versão resumida:
+- Exibe versão resumida:
+  - Privacidade
+  - LGPD
+  - Termos
 
-  * Privacidade
-  * LGPD
-  * Termos
-* Redireciona para páginas completas
+- Redireciona para páginas completas
 
 ---
 
@@ -88,13 +90,13 @@ README.md
 
 **Função:** resumo executivo (confiança e transparência)
 
-* Linguagem acessível
-* Explica:
+- Linguagem acessível
+- Explica:
+  - papel da plataforma
+  - tratamento de dados
+  - modelo IA + humano
 
-  * papel da plataforma
-  * tratamento de dados
-  * modelo IA + humano
-* CTA para PDF institucional
+- CTA para PDF institucional
 
 ---
 
@@ -102,14 +104,14 @@ README.md
 
 **Função:** documento técnico/jurídico
 
-* Estrutura formal:
+- Estrutura formal:
+  - definições
+  - bases legais
+  - retenção
+  - segurança
+  - direitos do titular
 
-  * definições
-  * bases legais
-  * retenção
-  * segurança
-  * direitos do titular
-* Sem narrativa comercial
+- Sem narrativa comercial
 
 ---
 
@@ -117,9 +119,9 @@ README.md
 
 **Função:** regras de uso da plataforma
 
-* Modelo B2B institucional
-* Responsabilidades claras
-* Escopo educacional
+- Modelo B2B institucional
+- Responsabilidades claras
+- Escopo educacional
 
 ---
 
@@ -133,8 +135,8 @@ Arquivo:
 
 Uso:
 
-* Material para jurídico/compliance
-* Download e visualização padronizada:
+- Material para jurídico/compliance
+- Download e visualização padronizada:
 
 ```
 #page=1&zoom=page-width
@@ -146,23 +148,23 @@ Uso:
 
 ### 1. Header sólido (decisão chave)
 
-* Removido blur/transparência
-* Motivo: evitar “granulação” e melhorar percepção de qualidade
+- Removido blur/transparência
+- Motivo: evitar “granulação” e melhorar percepção de qualidade
 
 ---
 
 ### 2. Fundo da página (index)
 
 ```
-bg-white → aplicado
+bg-[#FCFCFD] → aplicado
 bg-surface → removido
 ```
 
 Impacto:
 
-* Melhor contraste
-* Melhor legibilidade
-* Percepção mais premium
+- Melhor contraste
+- Melhor legibilidade
+- Percepção mais premium
 
 ---
 
@@ -180,27 +182,27 @@ Impacto:
 
 ### Antes (BKP)
 
-* Estrutura monolítica
-* Sem separação legal
-* Sem padrão visual consistente
-* Sem componentização
+- Estrutura monolítica
+- Sem separação legal
+- Sem padrão visual consistente
+- Sem componentização
 
 ### Depois (Atual)
 
-* Arquitetura modular
-* Páginas legais separadas
-* Header e Footer reutilizáveis
-* Padrão visual consistente
-* Preparado para escala
+- Arquitetura modular
+- Páginas legais separadas
+- Header e Footer reutilizáveis
+- Padrão visual consistente
+- Preparado para escala
 
 ---
 
 ## 🧠 Princípios de Produto Aplicados
 
-* Clareza > estética exagerada
-* Confiança > efeitos visuais
-* B2B exige previsibilidade
-* LGPD não é opcional — é diferencial
+- Clareza > estética exagerada
+- Confiança > efeitos visuais
+- B2B exige previsibilidade
+- LGPD não é opcional — é diferencial
 
 ---
 
@@ -219,21 +221,21 @@ Pronto para abordagem B2B:     ✅
 
 ### Produto
 
-* Evoluir dashboard (visão institucional)
-* Simulação de correção real
-* Demonstração guiada
+- Evoluir dashboard (visão institucional)
+- Simulação de correção real
+- Demonstração guiada
 
 ### Comercial
 
-* Script de abordagem para escolas
-* Proposta institucional
-* Onboarding piloto
+- Script de abordagem para escolas
+- Proposta institucional
+- Onboarding piloto
 
 ### Técnico
 
-* Evoluir componentização
-* Modularizar assets
-* Preparar backend (futuro)
+- Evoluir componentização
+- Modularizar assets
+- Preparar backend (futuro)
 
 ---
 
@@ -253,9 +255,9 @@ O ESTUDANTE.IM deixou de ser uma ideia e passou a ser um **produto apresentável
 
 A base construída permite:
 
-* Vender
-* Validar
-* Evoluir
+- Vender
+- Validar
+- Evoluir
 
 Sem retrabalho estrutural.
 

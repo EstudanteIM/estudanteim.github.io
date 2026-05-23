@@ -1,165 +1,208 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacidade | ESTUDANTE.IM</title>
-  
-<!-- BASE HEAD -->
-<!-- 1. Tailwind -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacidade | ESTUDANTE.IM</title>
 
-<!-- 2. Config -->
-<script src="../js/tailwind-config.js"></script>
+    <!-- BASE HEAD -->
+    <!-- 1. Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-<!-- 3. CSS base -->
-<link rel="stylesheet" href="../css/base.css">
+    <!-- 2. Config -->
+    <script src="../js/tailwind-config.js"></script>
 
-<!-- 4. JS -->
-<script src="../js/main.js" defer></script>
+    <!-- 3. CSS base -->
+    <link rel="stylesheet" href="../css/base.css" />
 
-<!-- ICOs -->
-<link rel="apple-touch-icon" sizes="180x180" href="../img/ico/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../img/ico/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../img/ico/favicon-16x16.png">
-<link rel="icon" href="../img/ico/favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="../img/ico/favicon.ico">
-<link rel="manifest" href="../site.webmanifest">
+    <!-- 4. JS -->
+    <script src="../js/main.js" defer></script>
 
-</head>
+    <!-- 5. ICOs -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../img/ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/ico/favicon-16x16.png"
+    />
+    <link rel="icon" href="../img/ico/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/ico/favicon.ico" />
+    <link rel="manifest" href="../site.webmanifest" />
 
-<body class="bg-white text-gray-900 pt-20">
+    <!-- 6. Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<div id="header"></div>
+    <!-- 7. Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Manrope:wght@400;500;600&family=Inter:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- CONTAINER -->
-  <div class="max-w-4xl mx-auto px-6 py-16">
+    <!-- 8 Icons Externos -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <!-- HEADER -->
-    <div class="mb-12">
-      <h1 class="text-4xl font-extrabold text-primary mb-4">
-        Privacidade e Proteção de Dados
-      </h1>
+  <body
+    data-page="internal"
+    class="bg-[#FCFCFD] text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed"
+  >
+    <div id="header"></div>
 
-      <p class="text-lg text-gray-600">
-        Transparência sobre como tratamos dados na plataforma ESTUDANTE.IM
-      </p>
-    </div>
+    <!-- PAGE SPACER -->
+    <div class="h-32"></div>
 
-    <!-- RESUMO EXECUTIVO -->
-    <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 mb-12">
-      <h2 class="font-bold text-lg mb-4">Resumo rápido</h2>
+    <!-- CONTAINER -->
+    <div class="max-w-4xl mx-auto px-6 md:px-8">
+      <!-- HEADER -->
+      <div class="mb-12">
+        <h1 class="text-4xl font-extrabold text-primary mb-4">
+          Privacidade e Proteção de Dados
+        </h1>
 
-      <ul class="space-y-2 text-sm">
-        <li>✔ Não comercializamos dados pessoais</li>
-        <li>✔ Dados pertencem à instituição de ensino</li>
-        <li>✔ Atuamos principalmente como operadora de dados</li>
-        <li>✔ Uso exclusivo para fins educacionais</li>
-        <li>✔ Conformidade com a LGPD (Lei nº 13.709/2018)</li>
-      </ul>
-    </div>
-
-    <!-- TECNOLOGIA -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Como funciona nossa tecnologia</h2>
-
-      <p class="text-gray-700 leading-relaxed">
-        A ESTUDANTE.IM utiliza Inteligência Artificial para análise inicial das redações,
-        combinada com validação humana por professores, garantindo consistência técnica
-        e qualidade pedagógica no processo de correção.
-      </p>
-    </section>
-
-    <!-- PAPEL LGPD -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Nosso papel no tratamento de dados</h2>
-
-      <ul class="list-disc pl-6 space-y-2 text-gray-700">
-        <li>A instituição de ensino é a controladora dos dados</li>
-        <li>A ESTUDANTE.IM atua como operadora</li>
-        <li>Em casos específicos, podemos atuar como controladora (ex: contato direto)</li>
-      </ul>
-    </section>
-
-    <!-- USO DOS DADOS -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Para que utilizamos os dados</h2>
-
-      <ul class="list-disc pl-6 space-y-2 text-gray-700">
-        <li>Correção de redações (IA + validação humana)</li>
-        <li>Acompanhamento e gestão pedagógica</li>
-        <li>Melhoria contínua da plataforma</li>
-        <li>Comunicação com instituições de ensino</li>
-      </ul>
-    </section>
-
-    <!-- SEGURANÇA -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Segurança</h2>
-
-      <p class="text-gray-700 leading-relaxed">
-        Adotamos medidas técnicas e organizacionais para proteger os dados contra acessos não autorizados,
-        uso indevido, alteração ou perda de informações.
-      </p>
-    </section>
-
-    <!-- DIREITOS -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold mb-4">Direitos dos titulares</h2>
-
-      <ul class="list-disc pl-6 space-y-2 text-gray-700">
-        <li>Acesso aos dados</li>
-        <li>Correção de informações incompletas ou desatualizadas</li>
-        <li>Exclusão de dados quando aplicável</li>
-        <li>Revogação de consentimento</li>
-      </ul>
-    </section>
-
-    <div class="mt-12 p-6 border border-gray-200 rounded-xl bg-gray-50">
-      <p class="font-semibold mb-2">
-        Documento formal para análise institucional
-      </p>
-
-      <p class="text-sm text-gray-600 mb-4">
-        Versão oficial do Aviso de Privacidade em PDF, recomendada para áreas Jurídicas e Compliance.
-      </p>
-
-      <a href="../files/AVISO_DE_PRIVACIDADE_ESTUDANTE.IM.pdf#page=1&zoom=page-width" 
-        target="_blank"
-        class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-semibold shadow-sm">
-        Visualizar documento
-      </a>
-
-      <a href="../files/AVISO_DE_PRIVACIDADE_ESTUDANTE.IM.pdf" 
-        download
-        class="block mt-3 text-sm text-gray-600 underline hover:text-gray-800">
-        Baixar PDF
-      </a>
-    </div>
-      
-    <!-- CONTATO -->
-    <section class="mt-12">
-      <h2 class="text-2xl font-bold mb-4">Contato</h2>
-
-      <p class="text-gray-700">
-        Para dúvidas ou solicitações relacionadas a dados:
-      </p>
-
-      <p class="mt-2 font-medium">
-        contato@estudante.im
-      </p>
-    </section>
-                
-      <!-- FOOTER -->
-      <div class="mt-16 text-sm  text-primary">
-        Última atualização: Maio de 2026
+        <p class="text-lg text-slate-600">
+          Transparência sobre como tratamos dados na plataforma ESTUDANTE.IM
+        </p>
       </div>
 
-  </div>
+      <!-- RESUMO EXECUTIVO -->
+      <div
+        class="bg-surface-container-low border border-blue-100 rounded-xl p-6 mb-12"
+      >
+        <h2 class="font-bold text-lg mb-4">Resumo rápido</h2>
 
-<div id="footer"></div>
-<div id="legalModalContainer"></div>
-<div id="cookieBanner"></div>
+        <ul class="space-y-2 text-sm">
+          <li>✔ Não comercializamos dados pessoais</li>
+          <li>✔ Dados pertencem à instituição de ensino</li>
+          <li>✔ Atuamos principalmente como operadora de dados</li>
+          <li>✔ Uso exclusivo para fins educacionais</li>
+          <li>✔ Conformidade com a LGPD (Lei nº 13.709/2018)</li>
+        </ul>
+      </div>
 
-</body>
+      <!-- TECNOLOGIA -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4">Como funciona nossa tecnologia</h2>
+
+        <p class="text-slate-700 leading-relaxed">
+          A ESTUDANTE.IM utiliza Inteligência Artificial para análise inicial
+          das redações, combinada com validação humana por professores,
+          garantindo consistência técnica e qualidade pedagógica no processo de
+          correção.
+        </p>
+      </section>
+
+      <!-- PAPEL LGPD -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4">
+          Nosso papel no tratamento de dados
+        </h2>
+
+        <ul class="list-disc pl-6 space-y-2 text-slate-700 leading-relaxed">
+          <li>A instituição de ensino é a controladora dos dados</li>
+          <li>A ESTUDANTE.IM atua como operadora</li>
+          <li>
+            Em casos específicos, podemos atuar como controladora (ex: contato
+            direto)
+          </li>
+        </ul>
+      </section>
+
+      <!-- USO DOS DADOS -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4">Para que utilizamos os dados</h2>
+
+        <ul class="list-disc pl-6 space-y-2 text-slate-700 leading-relaxed">
+          <li>Correção de redações (IA + validação humana)</li>
+          <li>Acompanhamento e gestão pedagógica</li>
+          <li>Melhoria contínua da plataforma</li>
+          <li>Comunicação com instituições de ensino</li>
+        </ul>
+      </section>
+
+      <!-- SEGURANÇA -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4">Segurança</h2>
+
+        <p class="text-slate-700 leading-relaxed">
+          Adotamos medidas técnicas e organizacionais para proteger os dados
+          contra acessos não autorizados, uso indevido, alteração ou perda de
+          informações.
+        </p>
+      </section>
+
+      <!-- DIREITOS -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-4">Direitos dos titulares</h2>
+
+        <ul class="list-disc pl-6 space-y-2 text-slate-700 leading-relaxed">
+          <li>Acesso aos dados</li>
+          <li>Correção de informações incompletas ou desatualizadas</li>
+          <li>Exclusão de dados quando aplicável</li>
+          <li>Revogação de consentimento</li>
+        </ul>
+      </section>
+
+      <div
+        class="mt-12 p-6 border border-gray-200 rounded-xl bg-surface-container-low"
+      >
+        <p class="font-semibold mb-2">
+          Documento formal para análise institucional
+        </p>
+
+        <p class="text-sm text-slate-600 mb-4">
+          Versão oficial do Aviso de Privacidade em PDF, recomendada para áreas
+          Jurídicas e Compliance.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a
+            href="../pages/compliance.html"
+            target="_blank"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#1E5BFF] to-[#22C55E] text-white font-semibold text-sm hover:brightness-105 motion-institutional"
+          >
+            Visualizar documento
+
+            <span class="material-symbols-outlined text-[16px]">
+              arrow_forward
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- CONTATO -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold mb-4">Contato</h2>
+
+        <p class="text-slate-700 leading-relaxed">
+          Para dúvidas ou solicitações relacionadas a dados:
+        </p>
+
+        <p class="mt-2 font-medium">contato@estudante.im</p>
+      </section>
+
+      <!-- FOOTER -->
+      <div class="mt-16 text-sm text-primary">
+        Última atualização: Maio de 2026
+      </div>
+    </div>
+
+    <div id="footer"></div>
+    <div id="legalModalContainer"></div>
+    <div id="cookieBanner"></div>
+  </body>
 </html>

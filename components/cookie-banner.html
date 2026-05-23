@@ -1,35 +1,39 @@
-  <div 
+<div
   id="cookieConsentBanner"
-  class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] w-[92%] max-w-5xl bg-white/95 backdrop-blur-sm border border-slate-200 shadow-[0_20px_60px_rgba(15,23,42,0.18)] rounded-3xl p-6 md:p-8 hidden">
-  
-
+  class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] w-[92%] max-w-5xl bg-[#FCFCFD]/95 backdrop-blur-sm border border-slate-200 shadow-[0_20px_60px_rgba(15,23,42,0.18)] rounded-3xl p-6 md:p-8 hidden"
+>
   <!-- HEADER -->
-  <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
-
+  <div
+    class="flex flex-col md:flex-row md:items-start md:justify-between gap-6"
+  >
     <!-- TEXT -->
     <div class="max-w-3xl">
-      
-      <span class="text-xs font-semibold tracking-[0.2em] uppercase text-primary">
+      <span
+        class="text-xs font-semibold tracking-[0.2em] uppercase text-primary"
+      >
         Privacidade e Transparência
       </span>
 
-      <h3 class="mt-3 text-2xl md:text-3xl font-bold text-slate-900 leading-tight">
+      <h3
+        class="mt-3 text-2xl md:text-3xl font-bold text-slate-900 leading-tight"
+      >
         Central de Preferências de Cookies
       </h3>
 
       <p class="mt-4 text-slate-700 leading-7">
-        Utilizamos tecnologias essenciais para garantir segurança, estabilidade e melhoria contínua da experiência institucional da plataforma ESTUDANTE.IM.
+        Utilizamos tecnologias essenciais para garantir segurança, estabilidade
+        e melhoria contínua da experiência institucional da plataforma
+        ESTUDANTE.IM.
       </p>
 
       <p class="mt-3 text-slate-700 leading-7">
-        Você pode aceitar todos os cookies ou personalizar suas preferências conforme desejar.
+        Você pode aceitar todos os cookies ou personalizar suas preferências
+        conforme desejar.
       </p>
-
     </div>
 
     <!-- ACTIONS -->
     <div class="flex flex-col gap-3 min-w-[220px]">
-
       <button
         id="acceptAllCookies"
         class="bg-primary text-white font-medium px-5 py-3 rounded-xl hover:opacity-90 transition-all"
@@ -43,71 +47,63 @@
       >
         Gerenciar preferências
       </button>
-
     </div>
-
   </div>
 
   <!-- PREFERENCES PANEL -->
-  <div 
+  <div
     id="cookiePreferencesPanel"
     class="hidden mt-8 border-t border-slate-200 pt-8"
   >
-
     <div class="space-y-5">
-
       <!-- NECESSARY -->
-      <div class="flex items-start justify-between gap-6 border border-slate-200 rounded-2xl p-5">
-        
+      <div
+        class="flex items-start justify-between gap-6 border border-slate-200 rounded-2xl p-5"
+      >
         <div>
           <h4 class="font-semibold text-slate-900">
             Cookies estritamente necessários
           </h4>
 
           <p class="mt-2 text-sm text-slate-700 leading-7">
-            Responsáveis pelo funcionamento, segurança e estabilidade da plataforma.
+            Responsáveis pelo funcionamento, segurança e estabilidade da
+            plataforma.
           </p>
         </div>
 
         <span class="text-sm font-medium text-primary whitespace-nowrap">
           Sempre ativos
         </span>
-
       </div>
 
       <!-- ANALYTICS -->
-      <div class="flex items-start justify-between gap-6 border border-slate-200 rounded-2xl p-5">
-        
+      <div
+        class="flex items-start justify-between gap-6 border border-slate-200 rounded-2xl p-5"
+      >
         <div>
-          <h4 class="font-semibold text-slate-900">
-            Analytics e desempenho
-          </h4>
+          <h4 class="font-semibold text-slate-900">Analytics e desempenho</h4>
 
           <p class="mt-2 text-sm text-slate-700 leading-7">
-            Nos ajudam a compreender performance e melhorar continuamente a experiência institucional.
+            Nos ajudam a compreender performance e melhorar continuamente a
+            experiência institucional.
           </p>
         </div>
 
         <label class="relative inline-flex items-center cursor-pointer">
-          <input 
-            type="checkbox" 
-            id="cookieAnalytics"
-            class="sr-only peer"
-          >
+          <input type="checkbox" id="cookieAnalytics" class="sr-only peer" />
 
-          <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-primary transition-all after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-slate-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full">
-          </div>
+          <div
+            class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-primary transition-all after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-[#FCFCFD] after:border after:border-slate-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full"
+          ></div>
         </label>
-
       </div>
 
       <!-- FUNCTIONALITY -->
-      <div class="flex items-start justify-between gap-6 border border-slate-200 rounded-2xl p-5">
-        
+      <div
+        class="flex items-start justify-between gap-6 border border-slate-200 rounded-2xl p-5"
+      >
         <div>
-          <h4 class="font-semibold text-slate-900">
-            Funcionalidade
-          </h4>
+          <h4 class="font-semibold text-slate-900">Funcionalidade</h4>
 
           <p class="mt-2 text-sm text-slate-700 leading-7">
             Permitem personalizações de navegação e preferências de experiência.
@@ -115,61 +111,72 @@
         </div>
 
         <label class="relative inline-flex items-center cursor-pointer">
-          <input 
-            type="checkbox" 
+          <input
+            type="checkbox"
             id="cookieFunctionality"
             class="sr-only peer"
-          >
+          />
 
-          <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-primary transition-all after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-slate-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full">
-          </div>
+          <div
+            class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-primary transition-all after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-[#FCFCFD] after:border after:border-slate-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full"
+          ></div>
         </label>
-
       </div>
 
       <!-- COMMUNICATION -->
-      <div class="flex items-start justify-between gap-6 border border-slate-200 rounded-2xl p-5">
-        
+      <div
+        class="flex items-start justify-between gap-6 border border-slate-200 rounded-2xl p-5"
+      >
         <div>
           <h4 class="font-semibold text-slate-900">
             Comunicação institucional
           </h4>
 
           <p class="mt-2 text-sm text-slate-700 leading-7">
-            Utilizados em integrações institucionais, formulários e canais oficiais de contato.
+            Utilizados em integrações institucionais, formulários e canais
+            oficiais de contato.
           </p>
         </div>
 
         <label class="relative inline-flex items-center cursor-pointer">
-          <input 
-            type="checkbox" 
+          <input
+            type="checkbox"
             id="cookieCommunication"
             class="sr-only peer"
-          >
+          />
 
-          <div class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-primary transition-all after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:border-slate-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full">
-          </div>
+          <div
+            class="w-11 h-6 bg-slate-200 rounded-full peer peer-checked:bg-primary transition-all after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-[#FCFCFD] after:border after:border-slate-300 after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full"
+          ></div>
         </label>
-
       </div>
-
     </div>
 
     <!-- FOOTER -->
-    <div class="mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
-
+    <div
+      class="mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5"
+    >
       <div class="text-sm text-slate-700 leading-7">
         Saiba mais em nossa
-        <a data-legal="privacy" class="text-primary font-medium hover:underline">
-          Política de Privacidade
-        </a>,
-        <a data-legal="lgpd" class="text-primary font-medium hover:underline">
+        <a
+          data-legal="privacy"
+          class="text-primary font-semibold hover:text-secondary motion-institutional"
+        >
+          Política de Privacidade </a
+        >,
+        <a
+          data-legal="lgpd"
+          class="text-primary font-semibold hover:text-secondary motion-institutional"
+        >
           LGPD
         </a>
         e
-        <a data-legal="terms" class="text-primary font-medium hover:underline">
-          Termos de Uso
-        </a>.
+        <a
+          data-legal="terms"
+          class="text-primary font-semibold hover:text-secondary motion-institutional"
+        >
+          Termos de Uso </a
+        >.
       </div>
 
       <button
@@ -178,9 +185,6 @@
       >
         Salvar preferências
       </button>
-
     </div>
-
   </div>
-
 </div>

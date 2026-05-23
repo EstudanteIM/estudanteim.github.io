@@ -1,6 +1,42 @@
-<div id="legalModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
-  <div class="bg-white max-w-3xl w-full rounded-2xl p-8 relative">
-    <button onclick="closeLegal()" class="absolute top-4 right-4">✕</button>
-    <div id="legalContent"></div>
+<div
+  id="legalModal"
+  class="fixed inset-0 bg-slate-950/35 backdrop-blur-sm hidden items-center justify-center z-[9999] p-6"
+>
+  <!-- CONTAINER -->
+  <div
+    class="relative w-full max-w-3xl bg-[rgba(252,252,253,0.96)] backdrop-blur-xl border border-white/40 rounded-[2rem] shadow-[0_40px_120px_rgba(15,23,42,0.22)] overflow-hidden motion-institutional"
+  >
+    <!-- TOP AMBIENT -->
+    <div
+      class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent"
+    ></div>
+
+    <!-- CLOSE -->
+    <button
+      onclick="closeLegal()"
+      class="absolute top-6 right-6 w-10 h-10 rounded-xl bg-slate-100/80 hover:bg-slate-200 text-slate-600 hover:text-slate-900 motion-institutional flex items-center justify-center"
+      aria-label="Fechar modal"
+    >
+      <span class="material-symbols-outlined text-[20px]"> close </span>
+    </button>
+
+    <!-- CONTENT -->
+    <div class="p-7 md:p-12 max-h-[85vh] overflow-y-auto">
+      <!-- HEADER -->
+      <div class="mb-8">
+        <span
+          class="text-xs font-semibold tracking-[0.18em] uppercase text-primary"
+        >
+          Compliance Institucional
+        </span>
+
+        <div
+          class="w-16 h-1 rounded-full bg-gradient-to-r from-primary to-secondary mt-4"
+        ></div>
+      </div>
+
+      <!-- DYNAMIC CONTENT -->
+      <div id="legalContent" class="space-y-6"></div>
+    </div>
   </div>
 </div>
